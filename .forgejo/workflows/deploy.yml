@@ -15,11 +15,6 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-
       - name: Prepare static assets
         run: |
           rm -rf dist
@@ -27,11 +22,8 @@ jobs:
           cp index.html dist/index.html
 
       - name: Deploy to Cloudflare Pages
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        run: |
-          node --version
-          npm --version
-          npx --yes wrangler@4 --version
-          npx --yes wrangler@4 pages deploy dist --project-name=lavinj-portfolio --branch=main
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=lavinj-portfolio --branch=main
