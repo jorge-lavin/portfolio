@@ -10,6 +10,14 @@ docker compose up --build
 
 Open <http://localhost:8080>.
 
+## Deployment
+
+Forgejo Actions deploys `index.html` to Cloudflare Pages on every push to
+`main`. Repository secrets required:
+
+- `CLOUDFLARE_API_TOKEN` — Account → Cloudflare Pages → Edit
+- `CLOUDFLARE_ACCOUNT_ID` — Cloudflare account ID
+
 ## Before publishing
 
 - Add direct public links for selected projects.
