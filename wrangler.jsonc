@@ -1,0 +1,8 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "rough-disk-52f4",
+  "compatibility_date": "2026-10-22",
+  "assets": {
+    "directory": "./dist"
+  }
+}
