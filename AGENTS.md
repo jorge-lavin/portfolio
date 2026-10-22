@@ -19,6 +19,7 @@ unless explicitly requested.
 - Never commit API tokens, account IDs, or other secrets.
 - Keep Cloudflare project name and deployment secrets in workflow/config only as
   needed; secrets belong in Forgejo Actions.
+- Use Conventional Commits (`feat:`, `fix:`, `ci:`, `docs:`, `chore:`).
 
 ## Verify
 
