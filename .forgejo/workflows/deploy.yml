@@ -15,13 +15,8 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Prepare static assets
-        run: |
-          rm -rf dist
-          mkdir dist
-          cp index.html dist/index.html
-          commit_sha=$(git log -1 --format=%h)
-          sed -i "s/__COMMIT_SHA__/$commit_sha/g" dist/index.html
+      - name: Build static assets
+        run: ./scripts/build-static.sh
 
       - name: Deploy to Cloudflare Worker
         env:

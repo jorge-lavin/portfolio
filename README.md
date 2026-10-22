@@ -10,6 +10,12 @@ docker compose up --build
 
 Open <http://localhost:8080>.
 
+Build deployable assets locally with:
+
+```sh
+./scripts/build-static.sh
+```
+
 ## Deployment
 
 Forgejo Actions deploys `index.html` as Cloudflare Worker static assets on every
