@@ -10,6 +10,10 @@ docker compose up --build
 
 Open <http://localhost:8080>.
 
+The portfolio is served at `/`; the blog page is available directly at
+<http://localhost:8080/blog.html>. Cloudflare selects the correct page by
+hostname in production.
+
 Build deployable assets locally with:
 
 ```sh
@@ -18,10 +22,11 @@ Build deployable assets locally with:
 
 ## Deployment
 
-Forgejo Actions builds and deploys `index.html` as Cloudflare Worker static
-assets on every push to `main`. Repository secrets required:
+Forgejo Actions builds and deploys `index.html` and `blog.html` as Cloudflare
+Worker static assets on every push to `main`. Repository secrets required:
 
-- `CLOUDFLARE_API_TOKEN` — Account → Workers Scripts → Edit
+- `CLOUDFLARE_API_TOKEN` — Account → Workers Scripts → Edit and Zone → Workers
+  Routes → Edit for `lavinj.dev`
 - `CLOUDFLARE_ACCOUNT_ID` — Cloudflare account ID
 
 The Worker is configured with `lavinj.dev` and `blog.lavinj.dev` as Cloudflare
@@ -39,6 +44,6 @@ curl -I https://lavinj.dev
 
 ## Before publishing more posts
 
-- Add each post as an entry in `index.html`, linking its date and slug to an
+- Add each post as an entry in `blog.html`, linking its date and slug to an
   article anchor.
 - Keep unfinished work marked as in progress.

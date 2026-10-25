@@ -1,6 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "rough-disk-52f4",
+  "main": "src/worker.js",
   "compatibility_date": "2026-10-22",
   "routes": [
     {
@@ -13,6 +14,8 @@
     }
   ],
   "assets": {
-    "directory": "./dist"
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "run_worker_first": true
   }
 }
