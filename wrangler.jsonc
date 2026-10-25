@@ -1,21 +1,14 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "rough-disk-52f4",
-  "main": "src/worker.js",
   "compatibility_date": "2026-10-22",
   "routes": [
     {
-      "pattern": "lavinj.dev",
-      "custom_domain": true
-    },
-    {
-      "pattern": "blog.lavinj.dev",
+      "pattern": "lavinj.xyz",
       "custom_domain": true
     }
   ],
   "assets": {
-    "directory": "./dist",
-    "binding": "ASSETS",
-    "run_worker_first": true
+    "directory": "./dist"
   }
 }
