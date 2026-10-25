@@ -3,32 +3,49 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Jorge Lavín — Backend Engineer" />
-    <title>Jorge Lavín — Backend Engineer</title>
+    <meta name="description" content="Notes by Jorge Lavín on backend engineering, APIs, data pipelines, and event systems." />
+    <title>notes — Jorge Lavín</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="min-h-screen bg-[#11100f] font-mono text-[#e9e2d0] antialiased">
     <main class="mx-auto max-w-4xl px-5 py-8 text-sm leading-7 sm:py-16">
       <header class="mb-10 border-b border-[#39332a] pb-4 text-[#ffb454]">
-        <a href="#top">jorge@lavinj.dev:~$</a>
-        <a class="float-right text-[#9c978d] hover:text-[#fff7e6]" href="https://github.com/jorge-lavin">github ↗</a>
+        <a href="#top">jorge@lavinj.dev:~/notes$</a>
+        <nav class="float-right space-x-4" aria-label="Primary navigation">
+          <a class="text-[#9c978d] hover:text-[#fff7e6]" href="#posts">posts</a>
+          <a class="text-[#9c978d] hover:text-[#fff7e6]" href="https://github.com/jorge-lavin">github ↗</a>
+        </nav>
       </header>
 
-      <section id="top" class="space-y-1">
-        <p><span class="text-[#ffb454]">jorge@lavinj.dev</span>:<span class="text-[#79c2b0]">~</span>$ whoami</p>
-        <p class="pl-5">Jorge Lavín — backend engineer</p>
-        <p class="pl-5 text-[#9c978d]">APIs · data pipelines · event systems</p>
+      <section id="top" class="space-y-3" aria-labelledby="intro-title">
+        <p><span class="text-[#ffb454]">jorge@lavinj.dev</span>:<span class="text-[#79c2b0]">~/notes</span>$ cat ./README.md</p>
+        <div class="pl-5">
+          <h1 id="intro-title" class="text-lg text-[#fff7e6]">Notes from the backend.</h1>
+          <p class="mt-1 text-[#9c978d]">Short, practical notes on APIs, data pipelines, event systems, and the tools around them.</p>
+        </div>
       </section>
 
-      <section class="mt-10 space-y-1">
-        <p><span class="text-[#ffb454]">jorge@lavinj.dev</span>:<span class="text-[#79c2b0]">~</span>$ ls ./projects</p>
-        <div class="mt-2 space-y-1 pl-5">
-          <p><a class="text-[#e9e2d0] hover:text-[#ffb454]" href="https://rss-studio.xyz">rss-studio.xyz/ ↗</a><span class="text-[#9c978d]"> Filtered RSS feed management</span></p>
+      <section id="posts" class="mt-12 space-y-5" aria-label="Posts">
+        <p><span class="text-[#ffb454]">jorge@lavinj.dev</span>:<span class="text-[#79c2b0]">~/notes</span>$ ls ./posts</p>
+        <div class="space-y-8 pl-5">
+          <div>
+            <p class="text-[#9c978d]">total 1</p>
+            <p><a class="text-[#e9e2d0] hover:text-[#ffb454]" href="#hello-world">2026-10-25&nbsp;&nbsp; hello-world/</a></p>
+          </div>
+
+          <article id="hello-world" class="space-y-3 border-l border-[#39332a] pl-5">
+            <header>
+              <p class="text-xs text-[#9c978d]">2026-10-25 · 1 min read</p>
+              <h2 class="text-lg text-[#fff7e6]">Hello, world</h2>
+            </header>
+            <p>This is a small place for notes about building backend systems and the tools that support them.</p>
+            <p class="text-[#9c978d]">I’ll keep entries focused on decisions, trade-offs, and things learned along the way.</p>
+          </article>
         </div>
       </section>
 
       <footer class="mt-16 border-t border-[#39332a] pt-4 text-[#9c978d]">
-        <span><span class="text-[#ffb454]">jorge@lavinj.dev</span>:<span class="text-[#79c2b0]">~</span>$ git log -1 --oneline</span>
+        <span><span class="text-[#ffb454]">jorge@lavinj.dev</span>:<span class="text-[#79c2b0]">~/notes</span>$ git log -1 --oneline</span>
         <br />
         <span class="pl-5">__COMMIT_LINE__</span>
       </footer>
