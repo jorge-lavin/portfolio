@@ -24,15 +24,17 @@ assets on every push to `main`. Repository secrets required:
 - `CLOUDFLARE_API_TOKEN` — Account → Workers Scripts → Edit
 - `CLOUDFLARE_ACCOUNT_ID` — Cloudflare account ID
 
-The Worker is configured with `blog.lavinj.dev` as a Cloudflare Custom Domain.
-The first deploy may require the domain to be active in the same Cloudflare
-account. If Wrangler cannot create it, add it once in Workers & Pages → the
-Worker → Settings → Domains & Routes → Add → Custom Domain, then deploy again.
+The Worker is configured with `lavinj.dev` and `blog.lavinj.dev` as Cloudflare
+Custom Domains. The first deploy may require the domain to be active in the
+same Cloudflare account. If Wrangler cannot create either domain, add it once
+in Workers & Pages → the Worker → Settings → Domains & Routes → Add → Custom
+Domain, then deploy again.
 
 After deployment, check:
 
 ```sh
 curl -I https://blog.lavinj.dev
+curl -I https://lavinj.dev
 ```
 
 ## Before publishing more posts

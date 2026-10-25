@@ -4,6 +4,10 @@
   "compatibility_date": "2026-10-22",
   "routes": [
     {
+      "pattern": "lavinj.dev",
+      "custom_domain": true
+    },
+    {
       "pattern": "blog.lavinj.dev",
       "custom_domain": true
     }
