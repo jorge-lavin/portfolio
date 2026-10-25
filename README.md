@@ -20,15 +20,15 @@ Build deployable assets locally with:
 ## Deployment
 
 Forgejo Actions deploys the portfolio and `/blog` static assets as one
-Cloudflare Worker on every push to `main`. The Worker uses `lavinj.xyz` as its
+Cloudflare Worker on every push to `main`. The Worker uses `lavinj.dev` as its
 custom domain. Repository secrets required:
 
 - `CLOUDFLARE_API_TOKEN` — Account → Workers Scripts → Edit and Zone → Workers
-  Routes → Edit for `lavinj.xyz`
+  Routes → Edit for `lavinj.dev`
 - `CLOUDFLARE_ACCOUNT_ID` — Cloudflare account ID
 
-The old `blog.lavinj.xyz` hostname is not configured; blog lives at
-<https://lavinj.xyz/blog>.
+The old `blog.lavinj.dev` hostname is not configured; blog lives at
+<https://lavinj.dev/blog>.
 
 ## Before publishing more posts
 
