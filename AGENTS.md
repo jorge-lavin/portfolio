@@ -8,7 +8,6 @@ unless explicitly requested.
 ## Files
 
 - `index.html`: portfolio page source and Tailwind markup.
-- `blog/index.html`: blog page source and Tailwind markup.
 - `scripts/build-static.sh`: creates deployable `dist/` and injects commit SHA.
 - `.forgejo/workflows/deploy.yml`: deploys `dist/` to Cloudflare Worker.
 - `dist/`: generated; never commit.

@@ -1,6 +1,6 @@
-# Portfolio and blog
+# Portfolio
 
-Static portfolio and blog for Jorge Lavín.
+Static portfolio for Jorge Lavín.
 
 ## Run locally
 
@@ -8,8 +8,7 @@ Static portfolio and blog for Jorge Lavín.
 docker compose up --build
 ```
 
-Open <http://localhost:8080> for portfolio or <http://localhost:8080/blog> for
-blog.
+Open <http://localhost:8080> for the portfolio.
 
 Build deployable assets locally with:
 
@@ -19,18 +18,10 @@ Build deployable assets locally with:
 
 ## Deployment
 
-Forgejo Actions deploys the portfolio and `/blog` static assets as one
-Cloudflare Worker on every push to `main`. The Worker uses `lavinj.dev` as its
-custom domain. Repository secrets required:
+Forgejo Actions deploys the portfolio as a Cloudflare Worker on every push to
+`main`. The Worker uses `lavinj.dev` as its custom domain. Repository secrets
+required:
 
 - `CLOUDFLARE_API_TOKEN` — Account → Workers Scripts → Edit and Zone → Workers
   Routes → Edit for `lavinj.dev`
 - `CLOUDFLARE_ACCOUNT_ID` — Cloudflare account ID
-
-The old `blog.lavinj.dev` hostname is not configured; blog lives at
-<https://lavinj.dev/blog>.
-
-## Before publishing more posts
-
-- Add each post under `blog/index.html`.
-- Keep unfinished work marked as in progress.
